@@ -16,13 +16,13 @@ export class QuoteDetailsComponent implements OnInit {
   }
 
   like=0;
-  unlike=0;
+  dislike=0;
 
   clickLike(){
     this.like=this.like+1;
   }
   clickUnlike(){
-    this.unlike=this.unlike+1;
+    this.dislike=this.dislike+1;
   }
 
   constructor() { }

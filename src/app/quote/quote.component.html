@@ -5,8 +5,8 @@
  </div>
  <div *ngFor='let quote of quotes;let i = index'>
     <h3 id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
-    <div>  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>TOGGLE</a> </div>
-    <div class="row" *ngIf="quote.showDescription">
-      <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+    <div>  <a class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>Show Quote</a> </div>
+    <div class="row" *ngIf="quote.showQuote">
+      <app-quote-details *ngIf="quote.showQuote" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>

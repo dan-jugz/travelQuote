@@ -1,1 +1,12 @@
 <h2>{{quote.description}}</h2>
+<h3>This Quote was submitted {{quote.completeDate|dateCount}} days ago</h3>
+<button class=" btn btn-info" (click)='clicklike()' type="submit">
+  <span class="glyphicon glyphicon-thumbs-u" aria-hidden="true"></span>
+   <span class="badge">{{like}} Like</span>
+  </button>
+  <button (click)=clickUnlike()' class="btn btn-info" type="submit">
+   <span class="badge">{{dislike}} Dislikes</span>
+  </button>
+  <div style="width: 20%;">
+    <a href="#" class="btn btn-sm animated-button victoria-one" (click)='quoteDelete(true)'>Delete Quote</a>
+  </div>
