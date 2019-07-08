@@ -19,10 +19,10 @@ export class QuoteDetailsComponent implements OnInit {
   dislike=0;
 
   clickLike(){
-    this.like=this.like+1;
+    this.like=this.like+=1;
   }
   clickUnlike(){
-    this.dislike=this.dislike+1;
+    this.dislike=this.dislike+=1;
   }
 
   constructor() { }
