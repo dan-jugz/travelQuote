@@ -1,12 +1,16 @@
 <h1 class="quotesheader">My Quotes</h1>
 <hr>
 <div class="row">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
- </div>
- <div *ngFor='let quote of quotes;let i = index'>
-    <h3 id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
-    <div>  <a class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>Show Quote</a> </div>
-    <div class="row" *ngIf="quote.showQuote">
+  
+  <div class="col-md-6">
+    <div *ngFor='let quote of quotes;let i = index'>
+      <h3 id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
+      <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Quote</button>
       <app-quote-details *ngIf="quote.showQuote" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
     </div>
+  </div>
+      <div class="col-md-6">
+                  
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
 </div>
