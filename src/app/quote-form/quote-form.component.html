@@ -1,9 +1,9 @@
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' style="border:2px solid blueviolet;">
       <div class="form-group">
         <label for="name">Quotted by:</label>
         <br>
         <input type="text" class="form-control" id="name" name="name" #name="ngModel" [(ngModel)]="newQuote.name"
-          required>
+          required placeholder="Author of Quote">
         <br>
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           <p>author is required</p>
@@ -14,7 +14,7 @@
         <label for="description">Quote:</label>
         <br>
         <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description"
-          #description="ngModel"></textarea>
+          #description="ngModel" placeholder="Type some travel wisdom"></textarea>
         <br>
         <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
           <p> Quote is Required</p>
@@ -30,6 +30,6 @@
           <p>Date is Required</p>
         </div>
       </div>
-      <button type="submit" id="button" >Add your Travel-quote</button>
+      <button type="submit" id="button" class="btn-outline-info" style="border-radius: 5px;" >Add your Travel-quote</button>
     </form>
  
