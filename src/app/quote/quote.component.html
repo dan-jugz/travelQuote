@@ -5,7 +5,7 @@
   <div class="col-md-6">
     <div *ngFor='let quote of quotes;let i = index'>
       <h3 id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
-      <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Quote</button>
+      <button class="btn btn-primary " (click)='toggleDetails(i)'>Show Quote</button>
       <app-quote-details *ngIf="quote.showQuote" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
     </div>
   </div>
