@@ -17,7 +17,7 @@ Input|Behavior|Output
 ----|----|------
 add quote|logs input|quote gets displayed
 like quote|adds like|likes accumulate
-delete|removes quote|quote leaves from array
+delete|asks you to confirm|quote leaves from 
 ### Known Bugs
 The like button seems to not work 
 ### support and contact details
